@@ -1,0 +1,5 @@
+ Get-User -Filter {(Enabled -eq $False)} -ResultPageSize 100 -ResultSetSize $null -Server LON-DC1 -Properties Name, OperatingSystem
+
+ Get-ADUser -Filter 'Name -like "*"' -SearchBase "OU=Sales,DC=Adatum,DC=COM" | Enable-ADAccount
+ 
+ 
