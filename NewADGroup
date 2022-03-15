@@ -1,0 +1,1 @@
+New-ADGroup -Name HelpDesk -Path "ou=IT,dc=Adatum,dc=com" –GroupScope Global
