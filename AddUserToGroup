@@ -1,0 +1,1 @@
+Add-ADGroupMember -Identity Managers -Members Dora
