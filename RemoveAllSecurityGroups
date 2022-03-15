@@ -1,0 +1,17 @@
+$user = "user"
+$adServer = "server" 
+Get-ADUser -Identity $user -Server $adServer |
+Get-ADPrincipalGroupMembership | where GroupCategory -eq 'Distribution' | select name 
+
+$ADgroup = Get-ADPrincipalGroupMembership -Identity $user -Server $adServer| where {($_.Name -ne “Domain Users”) -and ($_.Name -notlike 'File share group') -and ($_.groupcategory -ne "security")}
+Foreach ($ADgroup in $ADgroups) {
+Foreach ($user  in $users)  {
+
+    Try{
+Remove-ADPrincipalGroupMembership -Identity  $user -Server $adServer -MemberOf $ADgroup -Confirm:$false
+-ErrorAction Stop
+}
+  Catch
+    {write-warning "$_ Error removing user $user"}
+    }
+    }
