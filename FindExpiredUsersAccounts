@@ -1,1 +1,1 @@
-Search-ADAccount -Server $ThisDomain -Credential $Creds -AccountExpired -UsersOnly -ResultPageSize 2000 -resultSetSize $null| Select-Object Name, SamAccountName, DistinguishedName, AccountExpirationDate
+Search-ADAccount -Server <DomainName> -Credential $Creds -AccountExpired -UsersOnly -ResultPageSize 2000 -resultSetSize $null| Select-Object Name, SamAccountName, DistinguishedName, AccountExpirationDate
