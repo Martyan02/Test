@@ -1,0 +1,2 @@
+Add-Windowscapability -Online -Name Servercore.Appcompatibility~~~~0.0.1.0 -Source D:\
+#Please Note that you will need to have the installation CD of Windows Server 2019 mounted on the D\ directory.
