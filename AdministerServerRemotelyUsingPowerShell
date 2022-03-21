@@ -1,0 +1,6 @@
+Enter-PSSession -ComputerName SEA-DC1
+
+Get-Service -Name AppIDSvc
+
+Start-Service -Name AppIDSvc
+
