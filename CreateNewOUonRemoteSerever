@@ -1,0 +1,1 @@
+New-ADOrganizationalUnit -Name:"Seattle" -Path:"DC=Contoso,DC=com" -ProtectedFromAccidentalDeletion:$true -Server:"SEA-DC1.Contoso.com"
