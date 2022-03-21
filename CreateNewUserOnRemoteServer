@@ -1,0 +1,6 @@
+New-ADUser -Name Ty -DisplayName "Ty Carlson" -GivenName Ty -Surname Carlson -Path "ou=Seattle,dc=contoso,dc=com"
+
+Set-ADAccountPassword Ty
+
+Enable-ADAccount Ty
+
