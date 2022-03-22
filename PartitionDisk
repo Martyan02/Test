@@ -1,0 +1,5 @@
+Get-Disk
+Initialize-Disk -Number 1
+New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter M
+Format-Volume -DriveLetter M -FileSystem ReFS
+Exit
