@@ -1,1 +1,4 @@
 Resolve-DnsName -Server sea-svr1.contoso.com -Name testapp.treyresearch.net
+
+Resolve-DnsName -Server sea-svr1.contoso.com -Name sea-dc1.contoso.com
+
