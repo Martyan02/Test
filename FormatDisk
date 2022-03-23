@@ -1,0 +1,8 @@
+Initialize-Disk -Number 2
+New-Partition -DiskNumber 2 -UseMaximumSize -DriveLetter Y
+Format-Volume -DriveLetter Y -FileSystem ReFS
+
+Initialize-Disk -Number 3
+New-Partition -DiskNumber 3 -UseMaximumSize -DriveLetter X
+Format-Volume -DriveLetter X -FileSystem ReFS
+
