@@ -1,0 +1,6 @@
+$cred=Get-Credential
+
+$sess = New-PSSession -Credential $cred -ComputerName sea-svr2.contoso.com
+
+Enter-PSSession $sess
+
