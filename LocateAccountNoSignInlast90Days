@@ -1,0 +1,5 @@
+$days = (Get-Date).Adddays(-90)
+Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp
+
+Get-ADUser -Filter {LastLogonTimeStamp -lt $days -and enabled -eq $true} -Properties LastLogonTimeStamp | Disable-ADAccount
+#This command will disable the accounts that have not signed in for at least 90 days.
